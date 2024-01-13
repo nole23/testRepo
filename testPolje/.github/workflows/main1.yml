@@ -1,0 +1,30 @@
+name: Python Workflow
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12.1'  # Zamenite 'x' sa odgovarajućom verzijom Pythona
+
+    - name: Build Project
+      run: |
+        python setup.py sdist bdist_wheel
+
+    - name: Run Tests
+      run: |
+        python -m unittest discover -s tests
