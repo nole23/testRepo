@@ -72,5 +72,6 @@ jobs:
         chromedriver --version
 
     - name: Run Django Tests
+      working-directory: testRepo/Projekat
       run: |
         python manage.py test
