@@ -36,6 +36,7 @@ jobs:
     steps:
     - name: Activate Python Virtual Environment
       run: |
+        cd Projekat
         python -m venv env
         source env/bin/activate
     
@@ -45,6 +46,7 @@ jobs:
     - name: Install Django Dependencies
       working-directory: testRepo
       run: |
+        cd Projekat
         pip install -r ./testRepo/requirements.txt
     
     - name: Check Chrome and ChromeDriver versions
