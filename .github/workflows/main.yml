@@ -20,7 +20,6 @@ jobs:
     
     - name: Activate Python Virtual Environment
       run: |
-        cd VersionControl
         python -m venv env
         source env/bin/activate
   
@@ -29,7 +28,6 @@ jobs:
 
     - name: Install Django Dependencies
       run: |
-        cd VersionControl
         pip install -r requirements.txt
 
     - name: Check Chrome and ChromeDriver versions
@@ -56,5 +54,4 @@ jobs:
     
     - name: Run Django Tests
       run: |
-        cd VersionControl
         python manage.py test
