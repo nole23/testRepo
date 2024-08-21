@@ -52,7 +52,19 @@ jobs:
     
     - name: Install Django Dependencies
       run: |
-        pip install -r requirements.txt
+        pip install Django
+    
+    - name: Install Django Dependencies1
+      run: |
+        pip install djangorestframework
+
+    - name: Install Django Dependencies2
+      run: |
+        pip install django-cors-headers
+
+    - name: Install Django Dependencies3
+      run: |
+        pip install selenium
     
     - name: Check Chrome and ChromeDriver versions
       run: |
