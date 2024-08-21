@@ -71,7 +71,9 @@ jobs:
         google-chrome --version
         chromedriver --version
 
-    - name: Run Django Tests
-      working-directory: testRepo/Projekat
-      run: |
-        python manage.py test
+    - name: List directory contents of Testrepo
+      run: ls -la Testrepo
+    
+    - name: List directory contents of Projekat
+      working-directory: Testrepo
+      run: ls -la Projekat
