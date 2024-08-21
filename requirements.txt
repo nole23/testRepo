@@ -1,1 +1,5 @@
-setuptools
+Django
+djangorestframework
+django-cors-headers
+PyJWT
+selenium 
